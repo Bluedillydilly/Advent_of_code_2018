@@ -39,12 +39,45 @@ end
 #println("Size3: ",size(repeat3),"\nLength3: ", length(repeat3),"\n")
 #println("Check sum: ", length(repeat2)*length(repeat3))
 
-function one_letter_off( n::string, m::string)
-    let_sim = 0
-    for i in length(n)
-        if n[i] == m[i]
-            let_sim+=1
+function part_two()
+    file = open("input.2")
+    lines = readlines(file)
+    words_1_off = []
+    for word in lines
+        for comp_word in lines
+            if( word != comp_word && one_letter_off(word, comp_word) )
+                push!( words_1_off, [[word, comp_word]] )
+                @show word
+            end
         end
     end
+    println("One off: ", words_1_off)
+    pair = words_1_off[1][1]
+    println(pair)
+    same_letters=[]
+    for position in 1:1:length(pair[1])
+        @show position
+        if( pair[1][position] == pair[2][position])
+            push!(same_letters, pair[1][position])
+        end
+    end
+    println( join(same_letters) )
+end
+
+function one_letter_off( n, m )
+    let_sum = 0
+    if n == "" || m == ""
+        return false
+    end
+    i = 1
+    while i < length(n)
+        if i<length(m) && n[i] != m[i]
+            let_sum+=1
+        end
+        i+=1
+    end
+    @show [n,m, let_sum]
     return let_sum == 1
 end
+
+part_two()

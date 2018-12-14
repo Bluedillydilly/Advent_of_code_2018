@@ -1,0 +1,23 @@
+commit 55d71f018f7b804130c7e9d3e714d6de294c195f
+Author: blue <dylancuprewich@gmail.com>
+Date:   Fri Dec 14 16:47:41 2018 -0500
+
+    Completed day2. Part one of day2 may not be in working condition. Part two of day2 works properly.
+
+commit b6d443f54b804c362cf82e19e850f143b8f3190e
+Author: blue <dylancuprewich@gmail.com>
+Date:   Fri Dec 14 14:02:15 2018 -0500
+
+    added gitignore
+
+commit d1d9ef29821515f38a2dab1e81616a133c3118a4
+Author: blue <dylancuprewich@gmail.com>
+Date:   Sat Dec 8 23:00:51 2018 -0500
+
+    Baseline commit to submit existing files to git repository
+
+commit 14ed5da1d25a48886febf1899c336ccfa9ba0160
+Author: blue <dylancuprewich@gmail.com>
+Date:   Sat Dec 8 22:58:57 2018 -0500
+
+    first commit

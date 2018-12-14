@@ -7,8 +7,8 @@ function main()
     new_sum = ""
     #while count( x -> x == new_sum, sums ) < 2
     while length(sums) < 2000
-        for num in changes
             new_sum = sums[end] + num
+            for num in changes
             @show new_sum
             push!(sums, new_sum )
             if( count( x -> x == new_sum, sums ) > 1 )
